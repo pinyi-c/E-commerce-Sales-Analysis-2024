@@ -1,51 +1,40 @@
-# 📊 2024 電商銷售數據分析：探索夏季銷售額下降原因  
+# E-commerce Sales Analysis 2024 — Investigating the Decline in Summer Revenue
 
-## 🎯 專案目標  
-本專案旨在透過 **Python 資料分析工具**，深入探討不同時間段的產品銷售表現，分析影響銷售額的因素。  
+## Project Overview
+This project uses Python-based data analysis to examine product performance across seasons and identify the key factors behind declining summer sales. It demonstrates my ability to clean and process real-world datasets, conduct statistical analysis, and extract actionable business insights.
 
-## 🚀 專案功能與特色  
+## Key Features
+- Seasonal sales analysis to identify high- and low-performing periods  
+- Investigation into underperforming summer product categories  
+- Technical stack:  
+  - Data processing: **Pandas**, **NumPy**  
+  - Visualization: **Matplotlib**, **Seaborn**  
+  - Statistical tests: **t-test**, **chi-square tests**
 
-- **季節性銷售分析**：找出哪個季節的銷售表現最佳？哪個季節銷售額最低？  
-- **夏季低銷售產品分析**：夏季銷售表現最差的品項，探討可能的影響因素。  
-- **技術與工具**：  
-  - 資料處理：`Pandas`、`NumPy`  
-  - 視覺化：`Matplotlib`、`Seaborn`  
-  - 統計檢定：`ttest_ind`、`chi2_contingency`  
+## Dataset
+- **Source:** Kaggle — *E-commerce Sales Data 2024*  
+- **Main File:** `customer_details.csv`  
+- **Fields include:**  
+  - Customer attributes: gender, age  
+  - Purchase information: product category, season, order amount, purchase frequency, rating  
 
-## 📂 資料來源  
+## Key Insights
 
-- **數據集**：[Kaggle - E-commerce Sales Data 2024](https://www.kaggle.com/datasets/datascientist97/e-commerece-sales-data-2024/data)  
-- **主要檔案**：`customer_details.csv`  
-- **數據欄位**：  
-  - **消費者屬性**：性別、年齡  
-  - **購買資訊**：購買商品、訂單季節、購買金額、消費頻率、顧客評分  
+### Demographic Analysis
+- Men under 30 were the primary buyers, especially for hoodies, sweaters, jackets, and shirts.  
+- Young women showed lower purchase activity in many apparel categories.  
+- Men aged 50–60 showed higher spending on sweaters and gloves, while women over 60 showed significantly lower spending in these categories.
 
-## 📊 分析結果與結論  
+### Summer Sales Decline
+- Typical summer items such as skirts, T-shirts, and shirts performed unexpectedly poorly during the summer.  
+- Winter items consistently underperformed in the summer season. Statistical testing confirmed significant seasonal differences in revenue.
 
-### 🏷 人口統計分析  
-1. **主要客群**：  
-   - **30 歲以下男性** 為 2024 年主要消費群體，特別偏好 **帽 T、毛衣、外套、襯衫**。  
-   - **年輕女性** 在多種類別商品的銷售表現較差，尤其是 **帽 T、毛衣、外套**。  
-   - **50-60 歲男性** 在 **毛衣、手套** 類別的消費額較高，而 **60 歲以上女性** 在這些品項的購買力相對較低。  
+### Customer Segmentation
+Customers were categorized into low, medium, and high purchasing power groups based on purchase frequency.
+- Low and high purchasing power groups were more influenced by seasonal changes and showed higher spending in fall and winter.  
+- Medium purchasing power customers remained relatively stable across seasons, except for a dip in summer.
 
-### ❄️ 夏季銷售低迷的商品  
-1. **異常現象**：  
-   - **短裙、短袖、襯衫** 這些典型的 **夏季商品**，反而在夏季銷售表現最差。  
-   - **毛衣、帽 T** 這類冬季商品在夏季銷售不佳，並且經過 `ttest` 驗證後，確定 **夏季與冬季的銷售額存在顯著差異**。  
-
-### 🎯 顧客分群分析  
-根據每位顧客過去的購買次數，將其購買力分為三組（**低購買力、中購買力、高購買力**），並分別觀察四季的銷售額表現。  
-
-- **低 & 高購買力客群**：購買行為受 **季節與外部因素影響較大**，特別是在折扣較多的 **秋冬季**，銷售額顯著提升。  
-- **中購買力客群**：除了夏季銷售額較低，其他季節的購買行為變化較小。  
-
-## ⚠️ 此份資料集的限制  
-
-- **單一商品購買**：  
-  - 每位顧客的數據僅記錄單次購買，無法分析購物籃組合（Basket Analysis）或顧客回購率，限制了交叉銷售（Cross-selling）與顧客忠誠度的研究。  
-
-- **產品資訊缺乏**：  
-  - 數據集中 **缺少產品詳細資訊**（如庫存數量、尺寸等），無法進行庫存管理、產品組合分析或需求預測（Demand Forecasting）。  
-
-- **折扣與優惠券使用偏誤**：  
-  - 數據顯示，只有 **男性顧客** 使用優惠券，這可能反映了數據收集過程中的偏誤，影響了對折扣影響銷售的評估。  
+## Dataset Limitations
+- Each entry represents a single purchase, limiting the ability to analyze basket behavior or customer retention.  
+- Missing product-level metadata (e.g., inventory, size, variations) restricts forecasting and product optimization analysis.  
+- Only male customers used coupons in this dataset, indicating potential data collection bias affecting discount-related insights.
